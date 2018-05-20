@@ -11,6 +11,7 @@ import {
     Text,
     View
 } from 'react-native';
+import PresentationalComponent from './PresentationalComponent'
 
 export default class Home extends Component {
     state = {
@@ -20,9 +21,7 @@ export default class Home extends Component {
     render() {
         return (
             <View>
-                <Text onPress = {this.updateState}>
-                    {this.state.myState}
-                </Text>
+                <PresentationalComponent myState = {this.state.myState} updateState = {this.updateState}/>
             </View>
         );
     }
